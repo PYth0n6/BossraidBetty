@@ -1,0 +1,389 @@
+--//basically op betty with super fast regen and kinda no cooldown\\
+          --//amazing scripts:https://discord.gg/Kc7ZysaEhs\\
+
+removelockon = true
+game.StarterGui:SetCoreGuiEnabled(Enum.CoreGuiType.Chat, true)
+--game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:Destroy()
+game.Players.LocalPlayer.PlayerGui.CharacterSelection.Character.Value = "Betty"
+game.Players.LocalPlayer.CharacterAdded:Connect(function(char)
+	wait(1)
+
+humanoid = game.Players.LocalPlayer.Character.Humanoid
+local Anim = Instance.new("Animation")
+Anim.AnimationId = "rbxassetid://4575983939"
+local k = game.Players.LocalPlayer.Character.Humanoid:LoadAnimation(Anim)
+
+landed = false 
+humanoid.StateChanged:Connect(function(oldState, newState)
+    if newState == Enum.HumanoidStateType.Jumping then
+        if not landed then
+            landed = true
+            return
+        end
+    elseif newState == Enum.HumanoidStateType.Landed and landed then
+        landed = false
+        k:Play()
+    end
+end)
+wait(1)
+---------------------------------------------------------
+--//notis
+ame:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "Kaboom";
+    Text = "Join the discord for more amazing scripts!";
+    Duration = 69696969696969;
+    Button1 = "Sure";
+})
+game:GetService("StarterGui"):SetCore("SendNotification", {
+    Title = "wORT";
+    Text = "https://discord.gg/Kc7ZysaEhs";
+    Duration = 69696969696969;
+    Button1 = "thanks";
+})
+
+---------------------------------------------------------
+--//epix chat
+game.Players.LocalPlayer.Chatted:Connect(function(Chat)
+local A_1 =  {
+          [1] = getrenv()._G.Pass, 
+          [2] = "Chatted", 
+          [3] = '[ Bossbetty ]\n' ..Chat, 
+          [4] = Color3.fromRGB(255, 0, 0)
+    }
+    local Event = game:GetService("ReplicatedStorage").Remotes.Events
+    Event:FireServer(A_1)
+end)
+------------------------------------------------------
+--//epic music
+spawn(function()
+    pcall(delfile, 'betty.mp3')
+    writefile('betty.mp3', syn.request({Url='https://cdn.discordapp.com/attachments/990875108191133709/990877257864212490/betty.mp3', Method='GET'}).Body)
+    local Music = Instance.new('Sound')
+    Music.Name = 'betty'
+    Music.SoundId = getsynasset('betty.mp3')
+    Music.Looped = true
+    Music.Volume = 1.7
+    Music.Playing = true
+    Music.Parent = char
+end)
+
+	------------------------------------------------------
+	--//funi cool stamina regen fast wow!111
+char = game.Players.LocalPlayer.Character
+spawn(function()
+    repeat wait()
+        for _,v in pairs(char:GetChildren()) do
+            if v.Name == 'DrainStamina' or v.Name == 'DrainSprint' or v.Name == 'Hit' or v.Name == 'Hitt' or v.Name == 'Damaged' or v.Name == 'Grounded' or v.Name == 'StayGrounded' or v.Name == 'KnockBack' or v.Name == 'Reset' then
+                v:Destroy()
+            end
+        end
+    until false
+end)
+--//Remove lock on ez
+	
+-------------------------------------------------------
+-------------------------------------------------------
+--// epic gui stuff
+game.Players.LocalPlayer.Character.Head.HealthBar.Frame.PName.Text = "Bete Noire"
+game.Players.LocalPlayer.PlayerGui.UI.Ui.Info.Attack.Text = "Attack:260"
+game.Players.LocalPlayer.PlayerGui.UI.Ui.Info.Defense.Text = "Defense: 700"
+game.Players.LocalPlayer.Character.Head.HealthBar.Frame.Health.BackgroundColor3 = Color3.fromRGB(255, 192, 203)
+game.Players.LocalPlayer.Character.Head.HealthBar.Frame.HP.TextColor3 = Color3.fromRGB(230,230,250)
+game.Players.LocalPlayer.Character.Head.HealthBar.Frame.HealthLabel.TextColor3 = Color3.fromRGB(231,84,128)
+game.Players.LocalPlayer.Character.Head.HealthBar.Frame.PName.TextColor3 = Color3.fromRGB(255, 192, 203)
+game.Players.LocalPlayer.Character.Head.HealthBar.Frame.PName.TextStrokeColor3 = Color3.fromRGB(231,84,128)
+game.Players.LocalPlayer.PlayerGui.UI.Ui.ManaBar.Bar.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+game.Players.LocalPlayer.PlayerGui.UI.Ui.StaminaBar.Bar.BackgroundColor3 = Color3.fromRGB(139,0,0)
+--//Sussy moves!1!!
+
+wait(1)
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.Z and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass, 
+        [2] = "KumuGrab",
+        [3] = game:GetService("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.X and not gameProcessedEvent then
+	local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass, 
+        [2] = "BettyGrab",
+        [3] = game:GetService("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.C and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "JumpKnife"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.V and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "Move2"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.B and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "Move3"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.N and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "Move4",
+        [3] = game:GetService("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.M and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "Move5"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.F and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "BettyGroundBlast"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.G and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "Move6",
+        [3] = game:GetService("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.H and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "ScytheDash"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.J and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "HateExplosion"
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+local mouse = game.Players.LocalPlayer:GetMouse()
+game:GetService("UserInputService").InputBegan:connect(function(inputObject, gameProcessedEvent)
+	if inputObject.KeyCode == Enum.KeyCode.K and not gameProcessedEvent then
+local args = {
+    [1] = {
+        [1] = getrenv()._G.Pass,
+        [2] = "HateSlash",
+        [3] = game:GetService("Players").LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value
+    }
+}
+
+game:GetService("ReplicatedStorage").Remotes.BettyMoves:InvokeServer(unpack(args))
+end
+end)
+
+
+
+
+
+
+
+
+
+
+local opsoulcd = false
+function opsoul()
+    spawn(function()
+        local target = game.Players.LocalPlayer.Backpack.Main.LockOnScript.LockOn.Value
+        if not target:FindFirstChild("Torso") then return end
+        opsoulcd = true
+        spawn(function()
+            local A_1 = 
+            {
+                [1] = getrenv()._G.Pass, 
+                [2] = "Spear", 
+                [3] = "Start"
+            }
+            local Event = game:GetService("ReplicatedStorage").Remotes.BettyMoves
+            Event:InvokeServer(A_1)
+        end)
+        wait(4)
+        if not game.Players.LocalPlayer.Character:FindFirstChild("BettySpear") then return end
+        local prpos = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = target.Torso.CFrame
+        spawn(function()
+            wait(0.2)
+            for i = 1,60 do
+                game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = prpos
+                wait()
+            end
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+        end)
+        wait()
+        for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+            if v.Name == "BettySpear" then
+                spawn(function()
+                    local A_1 = 
+                    {
+                        [1] = getrenv()._G.Pass, 
+                        [2] = "Spear", 
+                        [3] = "Hit", 
+                        [4] = v, 
+                        [5] = target.Torso.CFrame,
+                        [6] = target.Torso
+                    }
+                    local Event = game:GetService("ReplicatedStorage").Remotes.BettyMoves
+                    Event:InvokeServer(A_1)
+                end)
+            end
+        end
+    end)
+    wait(20)
+    opsoulcd = false
+end
+
+game.Players.LocalPlayer:GetMouse().KeyDown:Connect(function(k)
+    if k == "p" then
+    if opsoulcd == true then return end
+        opsoul()
+    end
+end)
+end)                  
