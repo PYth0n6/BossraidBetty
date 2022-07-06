@@ -28,19 +28,20 @@ end)
 wait(1)
 ---------------------------------------------------------
 --//notis
-ame:GetService("StarterGui"):SetCore("SendNotification", {
+game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "Kaboom";
     Text = "Join the discord for more amazing scripts!";
     Duration = 69696969696969;
     Button1 = "Sure";
 })
+wait(1)
 game:GetService("StarterGui"):SetCore("SendNotification", {
     Title = "wORT";
     Text = "https://discord.gg/Kc7ZysaEhs";
     Duration = 69696969696969;
     Button1 = "thanks";
 })
-
+wait(0.5)
 ---------------------------------------------------------
 --//epix chat
 game.Players.LocalPlayer.Chatted:Connect(function(Chat)
